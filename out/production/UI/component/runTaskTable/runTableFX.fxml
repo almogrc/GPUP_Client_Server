@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane fx:id="runViewGridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="component.runTaskTable.RunTableController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="597.0" minHeight="10.0" prefHeight="592.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="frozenTV" prefHeight="200.0" GridPane.halignment="CENTER">
+        <columns>
+          <TableColumn fx:id="frozenCol" prefWidth="118.0" text="FROZEN" />
+        </columns>
+      </TableView>
+      <TableView fx:id="waitingTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+        <columns>
+          <TableColumn fx:id="waitingCol" prefWidth="117.0" text="WAITING" />
+        </columns>
+      </TableView>
+      <TableView fx:id="inProcessTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+        <columns>
+          <TableColumn fx:id="inProcessCol" prefWidth="118.0" text="IN-PROCESS" />
+        </columns>
+      </TableView>
+      <TableView fx:id="finishedTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+        <columns>
+          <TableColumn fx:id="finishedCol" prefWidth="117.0" text="FINISHED" />
+        </columns>
+      </TableView>
+      <TableView fx:id="skippedTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+        <columns>
+          <TableColumn fx:id="skippedCol" prefWidth="118.0" text="SKIPPED" />
+        </columns>
+      </TableView>
+   </children>
+</GridPane>

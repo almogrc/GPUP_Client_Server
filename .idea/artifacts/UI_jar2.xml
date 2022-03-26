@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="UI:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/UI_jar2</output-path>
+    <root id="archive" name="UI.jar">
+      <element id="module-output" name="UI" />
+      <element id="module-output" name="Logic" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/okHttp/okio-2.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/okHttp/okhttp-4.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/okHttp/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/okHttp/kotlin-stdlib-1.4.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/okHttp/kotlin-stdlib-common-1.4.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/google-gson-2.1/gson-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/google-gson-2.1/gson-2.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/3rd/google-gson-2.1/gson-2.1-sources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

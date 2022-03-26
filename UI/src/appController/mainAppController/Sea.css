@@ -1,0 +1,170 @@
+
+#mainScrollBar{
+    -fx-background-color: #afd9f4;
+    -fx-base: #2c9981;
+}
+#MainBorderPane{
+    -fx-background-color: #49ad9a;
+
+}
+#menuButtonSkins{
+    -fx-text-fill: #4cb0c7;
+    -fx-color-label-visible: #263d78;
+    -fx-progress-color: #263d78;
+    -fx-background-size: 16;
+    -fx-cell-size: 16;
+    -fx-prompt-text-fill: #263d78;
+    -fx-tick-label-fill: #263d78;
+}
+.menu-item{
+    -fx-text-fill: #263d78;
+    -fx-prompt-text-fill: #263d78;
+    -fx-tick-label-fill: #263d78;
+    -fx-color-label-visible: #263d78;
+
+    -fx-background-color: #5aabdf;
+}
+.menu-item:focused { -fx-background-color: #87ebe4; }
+
+.label{
+    -fx-font-size: 10;
+    -fx-font-family:"Lucida Console" ;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#0e62b5 0%, #9494e3 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-text-alignment: center;
+    -fx-background-color: -fx-table-cell-border-color, #78a0eb;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #458cd0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.tool-bar{ -fx-background-color: #9bd7ea;}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+
+
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#288db4 0%, #6193d9 25%, #92bef0 75%, #82e2e2 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:odd {
+    -fx-cell-hover-color: #112ca4;
+    -fx-background-color: #3636ff;
+    -fx-text-fill: white;
+}
+.list-cell:even {
+    -fx-cell-hover-color: #3ed8d8;
+    -fx-background-color: #326ee2;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-cell-hover-color: #3636ff;
+    -fx-text-fill: rgba(135, 236, 229, 0.69);
+}
+
+.choice-box{
+
+    -fx-text-alignment: center;
+    -fx-color-label-visible: #263d78;
+    -fx-progress-color: #263d78;
+    -fx-background-color: #30c8ed;
+    -fx-text-fill: #263d78;
+}
+.choice-box .context-menu { -fx-background-color: #60b1ed; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: #87ebe4; }
+.choice-box .menu-item:focused { -fx-background-color: #2424df; }
+TargetsDataTable even{background-color: #37569f;}
+
+.tab {
+    -fx-font-family: Arial;
+    -fx-font-size: 14;
+    -fx-text-fill:white;
+    -fx-text-alignment: center;
+    -fx-background-color: #63c5d4;
+}
+
+.tab:selected {
+    -fx-background-color: #209c9c;
+
+}
+.tab-pane *.tab-header-area *.tab-header-background{}
+
+#frozenTV { -fx-border-color: white;}
+#waitingTV{ -fx-border-color: white;}
+#inProcessTV{ -fx-border-color: white;}
+#finishedTV{ -fx-border-color: white;}
+#skippedTV{ -fx-border-color: white;}
+.tree-cell:selected {
+    -fx-font-weight: bold ;
+}
+.tree-cell {
+    -fx-padding: 0.75em 0em 0.75em 0em ;
+}
+.tree-view, .tree-cell {
+    -fx-background-color:#78a0eb;
+    -fx-text-fill: white ;
+}
+.tree-cell:expanded {
+    -fx-background-color: #458cd0;
+}
+.tree-cell:selected {
+    -fx-font-weight: bold ;
+}
+.tree-cell {
+    -fx-padding: 0.75em 0em 0.75em 0em ;
+}
+.tree-cell {
+    -fx-padding: 0.25em ;
+}
+.tree-view{
+    -fx-border-color: white;
+}

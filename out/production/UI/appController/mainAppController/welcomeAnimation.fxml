@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.mainAppController.welcomeSignController">
+   <children>
+      <ImageView fx:id="image" fitHeight="381.0" fitWidth="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Downloads/WhatsApp%20Image%202022-01-10%20at%2012.37.07.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

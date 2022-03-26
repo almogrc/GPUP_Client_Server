@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="MainScrollPaneData" prefHeight="876.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController.dataView.DataViewController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="913.0" minWidth="10.0" prefWidth="630.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.0" minWidth="10.0" prefWidth="390.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="695.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="695.0" minHeight="10.0" prefHeight="485.0" vgrow="SOMETIMES" />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox fx:id="SummaryDataVbox" prefHeight="243.0" prefWidth="345.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="graphNameLabel" text="Graph name:" />
+            <Label fx:id="UserNameUploadedLabel" text="User name uploaded:" />
+            <Label fx:id="TotalTargetsLabel" text="Total number of targets:" />
+            <Label fx:id="TotalRootsLabel" text="Number Of Roots:" />
+            <Label fx:id="TotalMidLabel" text="Number Of Middles:" />
+            <Label fx:id="TotalLeafLabel" text="Number Of Leaves:" />
+            <Label fx:id="TotalIndepLabel" text="Number Of Independents:" />
+            <Label fx:id="PriceSimulationLabel" text="Price simulation:" />
+            <Label fx:id="PriceCompilationLabel" text="Price Compilation:" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+      <TabPane prefHeight="218.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2">
+        <tabs>
+          <Tab fx:id="pathLocatorTab" text="Path Locator">
+               <content>
+                  <GridPane fx:id="upperGridPaneData">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="4.0" prefWidth="174.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="675.0" minWidth="10.0" prefWidth="211.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="726.0" minWidth="10.0" prefWidth="375.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="726.0" minWidth="0.0" prefWidth="237.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="108.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Path starts from: ">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Path ends in: " GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Ratio between targets: " GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ChoiceBox fx:id="pathFromTargetChoice" prefWidth="150.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="pathToTargetChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="pathRatioChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ListView fx:id="PathList" prefHeight="400.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="pathButtonStart" layoutX="33.0" layoutY="26.0" mnemonicParsing="false" onAction="#handlePathButtonOnAction" text="Start" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="27.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="errorPathLabel" text="Label" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="What if?">
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="4.0" prefWidth="148.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="675.0" minWidth="10.0" prefWidth="218.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="726.0" minWidth="10.0" prefWidth="375.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="726.0" minWidth="0.0" prefWidth="237.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="108.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Find dependencies for:">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="In ratio of:" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ChoiceBox fx:id="WhatIfTargetChoice" prefWidth="150.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="WhatIfRatioChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ListView fx:id="ListWhatIf" prefHeight="400.0" prefWidth="604.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="WhatIfStartButton" layoutX="33.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleWhatIfButtonOnAction" text="Start" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="27.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="errorWhatIfLabel" text="Label" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+          <Tab text="Circle Locator">
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="4.0" prefWidth="148.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="675.0" minWidth="10.0" prefWidth="218.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="726.0" minWidth="10.0" prefWidth="375.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="726.0" minWidth="0.0" prefWidth="237.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="108.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Check for circles:">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ChoiceBox fx:id="CircleTargetChoice" minHeight="-Infinity" minWidth="-Infinity" prefWidth="150.0" style="-fx-pref-width: 150;" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <ListView fx:id="CircleList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="CircleStartButton" layoutX="33.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleCircleButtonOnAction" text="Start" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="27.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="errorCircleLabel" alignment="CENTER" text="Label" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ScrollPane GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <content>
+            <TableView fx:id="TargetsDataTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#hendleRowClicked" prefHeight="646.0" prefWidth="632.0" GridPane.rowSpan="2">
+              <columns>
+                <TableColumn fx:id="TargetNameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="TargetLocationColumn" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="TargetDataColumn" prefWidth="75.0" text="Data" />
+                  <TableColumn fx:id="ReqColumn" prefWidth="75.0" text="Required">
+                     <columns>
+                        <TableColumn fx:id="ReqDirColumn" prefWidth="75.0" text="Direct" />
+                        <TableColumn fx:id="ReqIndirColumn" prefWidth="75.0" text="Indirect" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="DepColumn" prefWidth="75.0" text="Depending">
+                     <columns>
+                        <TableColumn fx:id="DepDirColumn" prefWidth="75.0" text="Direct" />
+                        <TableColumn fx:id="DepIndirColumn" prefWidth="75.0" text="Indirect" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</GridPane>

@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Web:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Web_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web" />
+          <element id="module-output" name="Logic" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="google-gson-2" />
+        </element>
+      </element>
+      <element id="artifact" artifact-name="Logic:jar" />
+    </root>
+  </artifact>
+</component>
